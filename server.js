@@ -8,9 +8,9 @@ const app = express();
 const PORT = process.env.PORT || 9001;
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(Cors());
-app.use(bodyParser.json());
+ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const apiRouter = Router(); // Create a new instance of Router
