@@ -3,6 +3,8 @@ import Cors from 'cors';
 import bodyParser from "body-parser";
 import Connect from "./connection.js";
 import router from './Router/routes.js';
+import { Buffer } from "buffer";
+global.SlowBuffer = Buffer;
 
 const app = express();
 const PORT = process.env.PORT || 9001;
